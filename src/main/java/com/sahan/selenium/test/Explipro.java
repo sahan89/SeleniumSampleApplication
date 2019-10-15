@@ -61,7 +61,7 @@ public class Explipro {
         System.out.println(consultantManagers.getText());
         System.out.println("------------------------------------------------------------");
 
-        Thread.sleep(100000);
+        Thread.sleep(1500);
         driver.quit();
     }
 }
