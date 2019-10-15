@@ -13,7 +13,7 @@ public class Explipro {
         driver.manage().window().maximize();
         driver.get("http://google.com");
         Thread.sleep(1000);
-        WebElement searchBox, searchBtn, workWithUsContent, whoWeAreContent, whoWeHelp, whoWeHelpContent;
+        WebElement searchBox, searchBtn, workWithUsContent, whoWeAreContent, whoWeHelp, whoWeHelpContent, consultantManagers;
         searchBox = driver.findElement(By.className("gLFyf"));
         searchBox.sendKeys("Explipro Group AB");
         Thread.sleep(1000);
@@ -40,10 +40,25 @@ public class Explipro {
         System.out.println(whoWeAreContent.getText());
         System.out.println("------------------------------------------------------------");
 
-        js.executeScript("window.scrollBy(0,1300)");
+        js.executeScript("window.scrollBy(0,1600)");
         Thread.sleep(1000);
         workWithUsContent = driver.findElement(By.id("comp-jqm6wwq7inlineContent-gridContainer"));
         System.out.println(workWithUsContent.getText());
+        System.out.println("------------------------------------------------------------");
+
+        js.executeScript("window.scrollBy(0,4500)");
+        Thread.sleep(1000);
+        consultantManagers = driver.findElement(By.id("comp-jslpbxnc"));
+        System.out.println(consultantManagers.getText());
+        System.out.println("------------------------------------------------------------");
+
+        consultantManagers = driver.findElement(By.id("comp-jsvve7y0"));
+        System.out.println(consultantManagers.getText());
+        js.executeScript("window.scrollBy(0,800)");
+        System.out.println("------------------------------------------------------------");
+
+        consultantManagers = driver.findElement(By.id("comp-jwgdwjgg"));
+        System.out.println(consultantManagers.getText());
         System.out.println("------------------------------------------------------------");
 
         Thread.sleep(100000);
